@@ -1,0 +1,11 @@
+
+.navigation {
+    position: fixed; /* Sikrer, at navigationen altid er synlig - også ved scroll */
+    transform: rotate(90deg); /* Roterer p-tags inde i navigation 180 grader mod højre */
+}
+
+.navigationslinjer {
+    width: 1px; /* Bredden på linjen er 1 px*/
+    height: 100%; /* Højden på linjen sættes til 100% af dens container */
+    border: none;
+}

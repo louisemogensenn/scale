@@ -1,0 +1,6 @@
+
+section {
+    background-image: url('../assets/forsideBilledeDarkMode.webp');
+    background-size: cover; /* Sikrer, at baggrundsbilledet fylder hele elementet. Billedet bliver skaleret op eller ned, så hele elementets baggrund dækkes. Det kan betyde, at noget af billedet bliver beskåret i kanterne (typisk top/bund eller sider) */
+    background-position: center; /* Fortæller browseren, at midten af billedet skal vises i midten af elementet */
+}
