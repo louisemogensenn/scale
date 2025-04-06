@@ -1,11 +1,19 @@
 
 .navigation {
+    display: flex; /* Elementerne i navigationen står på en horisontal linje */
+    gap: 25px; /* Bestemmer afstanden mellem hvert link */
+    margin: 30px; /* Bestemmer afstanden rundt om hele navigationsmenuen */
+    right: 0;
     position: fixed; /* Sikrer, at navigationen altid er synlig - også ved scroll */
-    transform: rotate(90deg); /* Roterer p-tags inde i navigation 180 grader mod højre */
+    top: 40%;
+    transform: rotate(90deg); /* roter hele nav */
+    transform-origin: right center; /* vigtig for placering */
+    font-size: 20px;
 }
 
 .navigationslinjer {
     width: 1px; /* Bredden på linjen er 1 px*/
-    height: 100%; /* Højden på linjen sættes til 100% af dens container */
-    border: none;
+    height: 24px; /* Agiver højden på stregen */
+    border: none; /* Fjerner border og altså 'skyggen', der opstår ved border */
+    background-color: var(--darkModeTekst); /* Angiver farven for linjen */
 }

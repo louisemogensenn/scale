@@ -1,6 +1,12 @@
 
-section {
-    background-image: url('../assets/forsideBilledeDarkMode.webp');
-    background-size: cover; /* Sikrer, at baggrundsbilledet fylder hele elementet. Billedet bliver skaleret op eller ned, så hele elementets baggrund dækkes. Det kan betyde, at noget af billedet bliver beskåret i kanterne (typisk top/bund eller sider) */
-    background-position: center; /* Fortæller browseren, at midten af billedet skal vises i midten af elementet */
+.forsideTopIndhold {
+  display: flex; /* Gør sektionen til en flex-container, så teksten kan placeres med justify-content */
+  flex-direction: column; /* Placerer teksten på en vertikalt linje */
+  justify-content: center; /* Placerer teksten i midten vertikalt */
+  height: 100vh; /* Sørger for, at sektionen fylder hele højden af viewporten - denne styling slettes, når der tilføjes mere indhold */
+  background-image: url('../assets/forsideBilledeDarkMode.webp'); /* Dit baggrundsbillede */
+  background-size: cover; /* Fylder baggrunden */
+  background-position: center; /* Billedet får samme midterpunkt som sin container */
+  color: white; /* Gør teksten hvid, så den er synlig på baggrunden */
+  text-align: center; /* Placerer teksten i midten horisontalt */
 }

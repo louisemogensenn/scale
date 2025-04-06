@@ -2,8 +2,9 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Forside from './views/Forside';
 import Kontakt from './views/Kontakt';
-import Cases from '.view/Cases';
-import Kompetencer from '.views/Kompetencer';
+import Cases from './views/Cases';
+import Kompetencer from './views/Kompetencer';
+import Layout from './Layout';
 
   const router = createBrowserRouter ([ // Laver en router med HTML5's history-API – dvs. "rigtige URL'er" som /kontakt
     {

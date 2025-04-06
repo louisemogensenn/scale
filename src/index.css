@@ -1,0 +1,19 @@
+:root {
+    --darkModeBaggrund: #000;
+    --lightModeBaggrund: #fff;
+    --darkModeTekst: #fff;
+    --lightModeTekst: #000;
+}
+
+html {
+    background-color: var(--darkModeBaggrund); /* Angiver baggrundsfarven */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+* {
+    padding: 0; /* Nulstiller al padding for siden */
+    margin: 0; /* Nulstiller al margin for siden */
+    text-decoration: none;
+    color: var(--darkModeTekst);
+}
