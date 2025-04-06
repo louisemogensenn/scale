@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Forside from './views/Forside';
+import Kontakt from './views/Kontakt';
+import Cases from '.view/Cases';
+import Kompetencer from '.views/Kompetencer';
 
-function App() {
-  const [count, setCount] = useState(0)
+  const router = createBrowserRouter ([ // Laver en router med HTML5's history-API – dvs. "rigtige URL'er" som /kontakt
+    {
+      path: "/",
+      element: <Layout />, // Når brugeren går ind på /, vises hele appen med <Layout /> som overordnet ramme. Her ligger Navbar, Outlet, og Footer.
+      children: [ // Disse er underruter (nogle kalder det også "nested routes"). De bliver vist inde i <Outlet />, der skal placeres et som du skal sted i Layout-komponenten.
 
+        {
+          index: true, // Det betyder: "Hvis brugeren bare går ind på /, vis da <Forside />". Dette er altså hjemmesiden.
+          element: <Forside />
+        },
+
+        {
+          path: '/kontakt',
+          element: <Kontakt />
+        },
+
+        {
+          path: '/cases',
+          element: <Cases />
+        },
+
+        {
+          path: '/kompetencer',
+          element: <Kompetencer />
+        }
+      ]
+    }
+  ])
+
+  export default function App() {
+  
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <RouterProvider router={router}/> /* Brug denne router til at håndtere navigationen i min app */
   )
 }
 
-export default App
