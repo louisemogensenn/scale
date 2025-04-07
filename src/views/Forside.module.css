@@ -3,10 +3,16 @@
   display: flex; /* Gør sektionen til en flex-container, så teksten kan placeres med justify-content */
   flex-direction: column; /* Placerer teksten på en vertikalt linje */
   justify-content: center; /* Placerer teksten i midten vertikalt */
-  height: 100vh; /* Sørger for, at sektionen fylder hele højden af viewporten - denne styling slettes, når der tilføjes mere indhold */
+  height: 100vh; /* Sørger for, at sektionen fylder hele højden af viewporten */
   background-image: url('../assets/forsideBilledeDarkMode.webp'); /* Dit baggrundsbillede */
   background-size: cover; /* Fylder baggrunden */
   background-position: center; /* Billedet får samme midterpunkt som sin container */
-  color: white; /* Gør teksten hvid, så den er synlig på baggrunden */
   text-align: center; /* Placerer teksten i midten horisontalt */
+}
+
+.forsideLogo {
+  width: 200px; /* Bredden på logoet */
+  height: 55px;
+  filter: brightness(0) invert(1);
+  align-self: center; /* Elementet placeres i midten af skærmen */
 }
