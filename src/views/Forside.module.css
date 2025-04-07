@@ -11,8 +11,8 @@
 }
 
 .forsideLogo {
-  width: 200px; /* Sætter en bestemt bredde på logoet */
-  height: 55px; /* Sætter en bestemt højde på logoet */
+  width: 340px; /* Sætter en bestemt bredde på logoet */
+  height: 92px; /* Sætter en bestemt højde på logoet */
   filter: brightness(0) invert(1); /* Bruges til at påføre grafiske effekter, brightness = 0 gør elementet helt sort, invert(1) (100%) gør farven hvid */
   align-self: center; /* Elementet placeres i midten af skærmen */
 }
