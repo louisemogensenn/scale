@@ -17,3 +17,12 @@
     border: none; /* Fjerner border og altså 'skyggen', der opstår ved border */
     background-color: var(--darkModeTekst); /* Angiver farven for linjen */
 }
+
+.navigationslink {
+    transition: transform 0.3s ease; /* Definerer overgangen ved hover, der tager 0.3 sec, hvor ease = starter langsomt, accelererer og bremser langsomt. */
+}
+
+.navigationslink:hover {
+    transform: scale(1.1);  /* Teksten skaleres op med en faktor på 1.1 (stigning på 10%) - refererer til den transform, der er angivet oven over */
+}
+
