@@ -8,6 +8,7 @@ export default function Forside() {
                 <img className={mystyle.forsideLogo} src="/src/assets/scaleLogo.svg" alt="Scale logo"/>
                 <p>Design med omtanke - Vi optimerer din digitale tilstedeværelse ved at kombinere æstetik, funktionalitet og performance. </p>
             </section>
+            
             <article>
                 <p>hej</p>
                 <p>hej</p>
