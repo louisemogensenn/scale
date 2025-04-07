@@ -3,12 +3,12 @@
     display: flex; /* Elementerne i navigationen står på en horisontal linje */
     gap: 25px; /* Bestemmer afstanden mellem hvert link */
     margin: 30px; /* Bestemmer afstanden rundt om hele navigationsmenuen */
-    right: 0;
+    right: 0; /* Elementeret placeres 0px fra højre side */
     position: fixed; /* Sikrer, at navigationen altid er synlig - også ved scroll */
-    top: 40%;
-    transform: rotate(90deg); /* roter hele nav */
-    transform-origin: right center; /* vigtig for placering */
-    font-size: 20px;
+    top: 350px; /* Elementet placeres 350px fra toppen */
+    transform: rotate(90deg); /* Roterer hele navigationen */
+    transform-origin: right center; /* Omdrejningspunktet - midtpunktet for den højre kant */
+    font-size: 20px; /* Skriftstørrelsen */
 }
 
 .navigationslinjer {
