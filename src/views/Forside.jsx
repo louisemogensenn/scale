@@ -24,14 +24,16 @@ export default function Forside() {
     
     // useEffect kører hver gang isDarkMode ændrer sig
 
+    // Nedstående bruges til at skifte forsidebilledet
     let backgroundClass = mystyle.forsideTopIndhold; // En konstant, der indeholder styling for forsideTopIndhold
 
     if (isDarkMode) { // Hvis dark mode er aktiveret (isDarkMode === true)
-        backgroundClass += " " + mystyle.darkMode; // Så tilføjes klassen darkmode til backgroundClass (så denne nu består af to klasser)
+        backgroundClass += " " + mystyle.darkModeBillede; // Så tilføjes klassen darkmode til backgroundClass (så denne nu består af to klasser)
     } else { // Hvis ikke dark mode er aktiveret
-        backgroundClass += " " + mystyle.lightMode; // Så tilføjes klassen lightmode til backgroundClass (så denne nu består af to klasser)
+        backgroundClass += " " + mystyle.lightModeBillede; // Så tilføjes klassen lightmode til backgroundClass (så denne nu består af to klasser)
     }
 
+    // Nedstående bruges til at skifte farven på logoet
     let svgColor; // En konstant, der skal bestemme farven for logoet (en svg-fil, der er placeret i midten af forsiden)
     // Denne konstant bruges i linje, hvor <svg>-tagget starter og bruges for fyldefarve for SVG'en
 
@@ -69,40 +71,50 @@ export default function Forside() {
 
             {/* Den sektion, der kan klikkes på for at skifte mellem dark mode og light mode */}
             <section className={mystyle.skiftModeSektion} onClick={toggleBaggrund}> {/* Sektionen er tom, da vi ønsker den gennemsigtig */}</section>
-                
-            <article className={mystyle.tekstOgPortraetbilleder}>
-                <section className={mystyle.scaleInfoOverskriftOgTekst}>
-                    <h1 className={mystyle.forsideHovedoverskrift}>HVEM ER SCALE?</h1>
-                    <p className={mystyle.infoOmScale}>Scale er et nyopstartet webbureau, der tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. Teamet består af to energiske/entusiastiske multimediedesignere, Pernille og Louise, der med deres fælles baggrunden inden for multimediedesign har et stort kendskab til digital udvikling.</p>
-                </section>
 
-                <aside className={mystyle.forsidePortraetbilleder}>
-                    <figure>
-                        <img src="src/assets/IMG_5260.jpeg" alt="Billede af Pernille, der er Head of Design hos Scale"/>
-                        <figcaption>Pernille Christensen</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="src/assets/IMG_5260.jpeg" alt="Billede af Louise, der er Head of Development hos Scale"/>
-                        <figcaption>Louise Mogensen</figcaption>
-                    </figure>
-                </aside>
-            </article>
+            <article className={mystyle.tekstOgBilledeIndhold}>
+                <article className={mystyle.tekstOgPortraetbilleder}>
+                    <section className={mystyle.scaleInfoOverskriftOgTekst}>
+                        <h1 className={mystyle.forsideHovedoverskrift}>HVEM ER SCALE?</h1>
+                        <p className={mystyle.infoOmScale}>Scale er et nyopstartet webbureau, der tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. Teamet består af to energiske/entusiastiske multimediedesignere, Pernille og Louise, der med deres fælles baggrunden inden for multimediedesign har et stort kendskab til digital udvikling.</p>
+                    </section>
 
-            <article className={mystyle.infobokse}>
-                <section className={mystyle.infoboks}>
-                    <h2>DIT DIGITALE FODAFTRYK</h2>
-                    <p>I SCALE arbejder vi aktivt på at reducere vores digitale fodaftryk og tage ansvar for de løsninger, vi skaber. <br /> <br /> Vi gør en indsats for at minimere energiforbruget gennem optimering af websites, så de kører hurtigt og effektivt - og forbedrer brugeroplevelsen. <br /> <br /> Vi sætter fokus på det, der betyder noget!</p>
-                </section>
+                    <aside className={mystyle.forsidePortraetbilleder}>
+                        <figure>
+                            <img src="src/assets/IMG_5260.jpeg" alt="Billede af Pernille, der er Head of Design hos Scale"/>
+                            <figcaption>Pernille Christensen</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="src/assets/IMG_5260.jpeg" alt="Billede af Louise, der er Head of Development hos Scale"/>
+                            <figcaption>Louise Mogensen</figcaption>
+                        </figure>
+                    </aside>
+                </article>
 
-                <section className={mystyle.infoboks + " midterboks"}>
-                    <h2>GRUNDIG VURDERING</h2>
-                    <p>Vores designproces omfatter en grundig vurdering af de teknologier, vi anvender. <br />Vi prioriterer programmeringssprog og framework, der giver høj ydeevne uden at gå på kompromis med hastighed og funktionalitet. <br /> <br /> Vi arbejder tæt med hostingudbydere, der tilbyder ansvarlige løsninger, der sikrer, at vores kunders websites er driftssikre.</p>
-                </section>
+                <article className={mystyle.infobokse}>
+                    <section className={mystyle.infoboks}>
+                        <h2>DIT DIGITALE FODAFTRYK</h2>
+                        <p>I SCALE arbejder vi aktivt på at reducere vores digitale fodaftryk og tage ansvar for de løsninger, vi skaber. <br /> <br /> Vi gør en indsats for at minimere energiforbruget gennem optimering af websites, så de kører hurtigt og effektivt - og forbedrer brugeroplevelsen. <br /> <br /> Vi sætter fokus på det, der betyder noget!</p>
+                    </section>
 
-                <section className={mystyle.infoboks}>
-                    <h2>LANGTIDSHOLDBART</h2>
-                    <p>Vi prioiterer at skabe løsninger, der ikke kun opfylder dit behov i dag, men også forbereder dig på fremtidens krav, i morgen. <br /> <br /> Vi designer med fleksibilitet i tankerne, så du nemt kan opdatere og vedligeholde din digitale platforme, hvilket forhindrer behovet for hyppige store ombygninger og dermed sparer ressourcer. </p>
-                </section>
+                    <section className={mystyle.infoboks + " " + mystyle.midterboks}>
+                        <h2>GRUNDIG VURDERING</h2>
+                        <p>Vores designproces omfatter en grundig vurdering af de teknologier, vi anvender. <br />Vi prioriterer programmeringssprog og framework, der giver høj ydeevne uden at gå på kompromis med hastighed og funktionalitet. <br /> <br /> Vi arbejder tæt med hostingudbydere, der tilbyder ansvarlige løsninger, der sikrer, at vores kunders websites er driftssikre.</p>
+                    </section>
+
+                    <section className={mystyle.infoboks}>
+                        <h2>LANGTIDSHOLDBART</h2>
+                        <p>Vi prioiterer at skabe løsninger, der ikke kun opfylder dit behov i dag, men også forbereder dig på fremtidens krav, i morgen. <br /> <br /> Vi designer med fleksibilitet i tankerne, så du nemt kan opdatere og vedligeholde din digitale platforme, hvilket forhindrer behovet for hyppige store ombygninger og dermed sparer ressourcer. </p>
+                    </section>
+                </article>
+
+                <article className={mystyle.kontaktOs}>
+                    <img src="src/assets/teamScale.webp" alt="Et billede af teamet bag SCALE" />
+                    <section>
+                        <h1>KONTAKT OS</h1>
+                        <p>Sammen udgør vi et stærkt team, der sættes din virksomhed i fokus! <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
+                    </section>
+                </article>
             </article>
         </>
     );

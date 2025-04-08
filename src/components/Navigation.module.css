@@ -15,7 +15,6 @@
     width: 1px; /* Bredden på linjen er 1 px*/
     height: 24px; /* Agiver højden på stregen */
     border: none; /* Fjerner border og altså 'skyggen', der opstår ved border */
-    background-color: var(--darkModeTekst); /* Angiver farven for linjen */
 }
 
 .navigationslink {

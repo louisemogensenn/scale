@@ -1,0 +1,16 @@
+
+.footerindhold {
+    display: flex; /* De to tekststykker sættes på linje */
+    margin: 0 0 35px 60px; /* Flugter med andet indhold på siden, der alt sammen er placeret 80px fra kanterne (60px her + 20px i padding i .footerindhold p) */
+}
+
+.footerindhold p {
+    padding: 20px 25px; /* Plads omkring tekstfelter */
+    color: inherit; /* Nedarver farven fra det forældre-element (HTML) */
+    font-size: 20px; /* Bestemmer fontens størrelse */
+}
+
+.kant {
+    border-right: 1px solid; /* Angiver en kant i højre side */
+    color: inherit; /* Nedarver farven fra det forældre-element (HTML) */
+}

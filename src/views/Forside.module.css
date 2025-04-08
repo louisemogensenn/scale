@@ -16,11 +16,11 @@
   align-self: center; /* Elementet placeres i midten af skærmen */
 }
 
-.darkMode {
+.darkModeBillede {
   background-image: url('../assets/forsideBilledeDarkMode.webp'); /* Baggrundsbilledet i toppen af forsiden i dark mode */
 }
 
-.lightMode {
+.lightModeBillede {
   background-image: url('../assets/forsideBilledeLightMode.webp'); /* Baggrundsbilledet i toppen af forsiden i light mode */
 }
 
@@ -38,14 +38,15 @@
 
 /* STYLING AF INDHOLD PÅ FORSIDE */
 
-.tekstOgPortraetbilleder {
-  display: flex; /* Stiller overskrift og tekst på horisontal linje med portrætbillederne */
-  justify-content: space-around; /* Sikrer lige meget plads omkring elementerne */
-  margin-bottom: 343px; /* Skaber afstanden ned til de tre informationsbokse */
+.tekstOgBilledeIndhold {
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
-.scaleInfoOverskriftOgTekst {
-  margin-left: 80px; /* Overskrift og tilhørende tekst placeres 84px fra venstre kant */
+.tekstOgPortraetbilleder {
+  display: flex; /* Stiller overskrift og tekst på horisontal linje med portrætbillederne */
+  justify-content: space-between; /* Stiller det ud til kanterne */
+  margin-bottom: 343px; /* Skaber afstanden ned til de tre informationsbokse */
 }
 
 .forsideHovedoverskrift {
@@ -61,7 +62,7 @@
 
 .forsidePortraetbilleder {
   display: flex; /* Placerer billederne på linje */
-  justify-content: space-around; /* Sikrer lige meget plads omkring*/
+  justify-content: space-around; /* Plads imellem sig */
   gap: 31px; /* Afstanden mellem billederne */
 }
 
@@ -73,15 +74,39 @@
 /* STYLING af DE TRE INFORMATIONSBOKSE */
 .infobokse {
   display: flex; /* De tre informationsbokse stille på en horisontal linje */
-  justify-content: space-around; /* De placeres med lige meget plads omkring sig */
+  justify-content: space-between; /* Plads imellem sig */
+  margin-bottom: 300px; /* Skaber afstand ned til nedstående elementer */
 }
 
 .infoboks {
   width: 320px; /* Bredden på tekstboksen*/
   line-height: 30px; /* Linjeafstand i tekstboksen*/
+  font-size: 20px; /* Brødteksens font-størrelse */
 }
 
 .infoboks h2 {
   font-size: 27px; /* Overskrifterne får en bestemt skriftstørrelse */
   margin-bottom: 30px; /* Afstand mellem overskrift og tilhørende tekst */
+}
+
+.midterboks {
+  border-left: 1px solid; /* Linjen på venstre side af boksen */
+  border-right: 1px solid; /* Linjen på højre side af boksen */
+  padding: 0 90px; /* Padding, der sikrer, at kanterne står i midten af de tre infobokse*/
+}
+
+.kontaktOs {
+  display: flex; /* Placerer elementerne på linje */
+  justify-content: space-between; /* Placerer dem helt ud til kanterne */
+  font-size: 25px; /* Teksten får en font-størrelse på 25px */
+  margin-bottom: 137px;
+}
+
+.kontaktOs img {
+  width: 534px; /* Bestemt bredde på billedet for bedre optimering */
+  height: 439px; /* Bestemt højde på billedet for bedre optimering */
+}
+
+.kontaktOs h1 {
+  font-size: 50px; /* Bestem skriftstørrelse for overskriften 'KONTAKT OS' */
 }

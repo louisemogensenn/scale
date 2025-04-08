@@ -42,3 +42,11 @@ html.dark hr {
     background-color: var(--darkmodeLinjefarve);
     transition: background-color 0.4s;
 }
+
+img {
+    filter: grayscale(1); /* Billeder får et filter over sig, der gør det sort/hvid */
+}
+
+img:hover {
+    filter: grayscale(0); /* Når musen holdes over fjernes sort/hvid-filteret */
+}
