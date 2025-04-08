@@ -36,7 +36,52 @@
   border: 1px dashed #000; /* Kant til at placere elementet */
 }
 
+/* STYLING AF INDHOLD PÅ FORSIDE */
+
+.tekstOgPortraetbilleder {
+  display: flex; /* Stiller overskrift og tekst på horisontal linje med portrætbillederne */
+  justify-content: space-around; /* Sikrer lige meget plads omkring elementerne */
+  margin-bottom: 343px; /* Skaber afstanden ned til de tre informationsbokse */
+}
+
+.scaleInfoOverskriftOgTekst {
+  margin-left: 80px; /* Overskrift og tilhørende tekst placeres 84px fra venstre kant */
+}
+
 .forsideHovedoverskrift {
-  left: 84px;
-  size: 50px;
+  font-size: 50px; /* Skriftstørrelsen på overskriften */
+}
+
+.infoOmScale {
+  width: 403px; /* Bredden på tekstfeltet*/
+  margin-top: 40px; /* Afstand til dens tilhørende overskrift*/
+  line-height: 30px; /* Linjeafstand */
+  font-size: 22px; /* Skriftstørrelsen for teksten */
+}
+
+.forsidePortraetbilleder {
+  display: flex; /* Placerer billederne på linje */
+  justify-content: space-around; /* Sikrer lige meget plads omkring*/
+  gap: 31px; /* Afstanden mellem billederne */
+}
+
+.forsidePortraetbilleder img {
+  width: 258px; /* Bestemt bredde på billederne giver bedre optimering */
+  height: 373px; /* Bestemt højde på billederne giver bedre optimering */
+}
+
+/* STYLING af DE TRE INFORMATIONSBOKSE */
+.infobokse {
+  display: flex; /* De tre informationsbokse stille på en horisontal linje */
+  justify-content: space-around; /* De placeres med lige meget plads omkring sig */
+}
+
+.infoboks {
+  width: 320px; /* Bredden på tekstboksen*/
+  line-height: 30px; /* Linjeafstand i tekstboksen*/
+}
+
+.infoboks h2 {
+  font-size: 27px; /* Overskrifterne får en bestemt skriftstørrelse */
+  margin-bottom: 30px; /* Afstand mellem overskrift og tilhørende tekst */
 }
