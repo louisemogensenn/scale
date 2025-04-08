@@ -1,0 +1,81 @@
+
+.kontaktInformationTop  {
+    display: flex; /* Elementerne sættes på linje */
+    justify-content: space-between; /* Mellemrummet placeres imellem elementerne */
+    align-items: flex-end; /* Elementerne placeres nederst i sin beholder (vertikalt)*/
+}
+
+/* INFORMATIONER I TOP VENSTRE */
+.kontaktIndhold {
+    margin-left: 80px; /* Flytter indholdet 80px ind fra venstre*/
+}
+
+.kontaktIndhold h3 {
+    font-size: 20px; /* Skriftstørrelse for den mindste overskrift øverst */
+    margin-top: 190px; /* Afstand til logo i øverste venstre hjørne */
+}
+
+.kontaktIndhold h1 {
+    margin: 10px 0 30px; /* Afstand til top, højre, bund og venstre*/
+    font-size: 50px; /* Skriftstørrelse */
+}
+
+.kontaktIndhold p {
+    font-size: 22px; /* Skriftstørrelse for tekst */
+    width: 571px; /* Tekstfeltets bredde */
+}
+
+.kontaktKant {
+    border-right: 1px solid;
+    color: inherit; /* Nedarver farver fra HTML */
+    margin-bottom: 372px; /* Afstand til næste information */
+    padding-right: 100px;
+}
+
+/* INFORMATIONER I TOP HØJRE */
+.overordnetScaleInfo {
+    margin-bottom: 372px; /* Skaber afstand til elementer under (eller skærmens bundkant*/
+}
+
+.scaleInfo {
+    display: flex; /* Placerer teksterne på linje */
+    gap: 15px; /* Skaber afstand mellem elementerne*/
+}
+
+.scaleInfo h4 {
+    font-weight: bold; /* Giver det en federe skrift */
+}
+
+.scaleInfo p {
+    margin-bottom: 0; /* Fjerner den margin, der ellers er sat på p */
+}
+
+/* STYLING AF BILLEDER OG NEDEFTER */
+
+.medarbejdere {
+    display: flex; /* Elementerne stilles på linje */
+    justify-content: space-between; /* Med pladsen imellem sig */
+    margin: 0 95px; /* Med 95 px ud til hver skærmkant */
+}
+
+.kontaktIndhold img {
+    width: 505px; /* Bestemt bredde for optimering */
+    height: 730px; /* Bestemt højde for optimering */
+}
+
+.navnUnderBillede {
+    font-size: 35px; /* Bestemmet skriftstørrelsen på teksten under billederne */
+}
+
+.titel {
+    border-left: 1px solid; /* Giver en kantfarve i venstre side */
+    color: inherit; /* Nedarver farve fra HTML */
+    padding-left: 5px; /* Skaber afstand mellem venstre kant og tekst */
+    font-style: italic; /* Giver skråskrift */
+    height: 27px; /* Bestemmer højden på tekstfeltet */
+    margin: 15px 0 35px; /* Bestemmet afstanden mellem titlen og billedet og titlen og e-mailen */
+}
+
+.nummer {
+    margin: 5px 0 200px; /* Bestemmer afstanden fra telefonnummeret ned til footeren */
+}

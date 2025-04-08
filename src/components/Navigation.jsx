@@ -7,7 +7,7 @@ export default function Navigation() {
         <>
             <nav className={mystyle.navigation}>
 
-                <Link className={mystyle.navigationslink} to="/kontakt">KONTAKT</Link>
+                <Link className={mystyle.navigationslink} to="/kompetencer">KOMPETENCER</Link>
 
                 <hr className={mystyle.navigationslinjer}/> {/* En vertikal linje */}
 
@@ -15,7 +15,7 @@ export default function Navigation() {
 
                 <hr className={mystyle.navigationslinjer}/> {/* En vertikal linje */}
 
-                <Link className={mystyle.navigationslink} to="/kompetencer">KOMPETENCER</Link>
+                <Link className={mystyle.navigationslink} to="/kontakt">KONTAKT</Link>
 
                 {/* linker til routen med stien /kontakt, som så rendre det React-komponent, du har defineret i din router - Den navigerer til viewet Kontakt, som er defineret for path '/kontakt' */}
 
