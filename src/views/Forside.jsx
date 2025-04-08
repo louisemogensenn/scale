@@ -1,36 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import mystyle from './Forside.module.css';
 
-export default function Forside() {
-    const [isDarkMode, setIsDarkMode] = useState(true); 
-    {/* 
-        Oprettelse af en state-variabel kaldet setIsDarkMode med startværdien(initialværdi), true. Når komponenten først renderes, vil isDarkMode = true og dermed vil dark mode være aktiveret. isDarkMode er altså variablen, der holder styr på, om dark mode er aktiveret eller ej. 
-        setDarkMode er en funktion, der bruges til at opdatere isDarkMode (ændrer den fra true til false eller omvendt)
-    */}
+    export default function Forside() {
+        const [isDarkMode, setIsDarkMode] = useState(true);
 
-    //Funktionen toggleBaggrund defineres – det er den, der skifter værdien af isDarkMode (fra true til false eller omvendt).
-    const toggleBaggrund = () => { // Der oprettes en funktion (toggleBaggrund), hvis indhold med => (pilesynpaxen/arrow function) er defineret under den
-        const nyVaerdi = !isDarkMode; // // Opretter en konstant nyVaerdi, som sættes til det modsatte af isDarkMode ved hjælp af ! (true bliver false, og false bliver true)
-        setIsDarkMode(nyVaerdi); // Funktionen setIsDarkMode bliver kaldt med nyVaerdi som parameter for at opdatere isDarkMode til nyVærdi.
-    
-        if (nyVaerdi) { // Hvis nyVærdi er true (altså dark mode er aktiveret)
-            document.documentElement.style.backgroundColor = 'var(--darkModeBaggrund)'; // Angives baggrundsfarven
-            document.documentElement.style.color = 'var(--darkModeTekst)'; // Og tekstfarven
-        } else { //Hvis nyVærdi ikke er true og lightmode derfor er aktiveret
-            document.documentElement.style.backgroundColor = 'var(--lightModeBaggrund)'; // Angives baggrundsfarven
-            document.documentElement.style.color = 'var(--lightModeTekst)'; //Og tekstfarven
-        }
+        /* Oprettelse af en state-variabel kaldet setIsDarkMode med startværdien(initialværdi), true. Når komponenten først renderes, vil isDarkMode = true og dermed vil   dark mode være aktiveret. isDarkMode er altså variablen, der holder styr på, om dark mode er aktiveret eller ej. 
+        setDarkMode er en funktion, der bruges til at opdatere isDarkMode (ændrer den fra true til false eller omvendt) */
+
+        //Funktionen toggleBaggrund defineres – det er den, der skifter værdien af isDarkMode (fra true til false eller omvendt).
+        const toggleBaggrund = () => { //Der oprettes en funktion (toggleBaggrund), hvis indhold med => (pilesynpaxen/arrow function) er defineret under den
+        setIsDarkMode(nuvaerende => !nuvaerende); // Funktionen med parameteren nuvaerende skal returnere det modsatte af nuvaerende i funktionen
     };
 
-    // Brug klassisk if-sætning til at sammensætte className
-    let backgroundClass = mystyle.forsideTopIndhold; /* Konstanten oprettes og får tildelt en css styling: mystyle.forsideTopIndhold */
+    useEffect(() => { // Funktionen, der er angivet herunder køres, når komponenten Forside.jsx er renderet
+        if (isDarkMode) { //Hvis dark mode er aktiveret isDarkMode === true
+            document.documentElement.classList.add('dark'); // document.documentElement er <html>. vi tilføjer klassen dark i html - stylingen afhænger af klasserne dark og light, som er defineret i index.css
+            document.documentElement.classList.remove('light'); // document.documentElement er <html>. vi fjerner klassen light i html - stylingen afhænger af klasserne dark og light, som er defineret i index.css
+        } else { // Hvis ikke dark mode er aktiveret
+            document.documentElement.classList.add('light'); // document.documentElement er <html>. vi tilføjer klassen light i html - stylingen afhænger af klasserne dark og light, som er defineret i index.css
+            document.documentElement.classList.remove('dark'); // document.documentElement er <html>. vi fjerner klassen dark i html - stylingen afhænger af klasserne dark og light, som er defineret i index.css
+        }
+    }, [isDarkMode]); // dependencies array - useEffect-funktionen kører hver gang isDarkMode ændrer sig.
+    
+    // useEffect kører hver gang isDarkMode ændrer sig
 
-    if (isDarkMode) { // Hvis darkmode er true
-        backgroundClass = backgroundClass + " " + mystyle.darkMode; // Så får backgroundClass klassen mystyle.darkMode tilføjet (så den nu har to klasser: mystyle.forsideTopIndhold og mystyle.darkMode. Det er derfor, der er mellemrum)
-    } else { // Hvis darkmode ikke er true (og altså er false)
-        backgroundClass = backgroundClass + " " + mystyle.lightMode; // Så får backgroundClass klassen mystyle.lightMode tilføjet (så den nu har to klasser)
+    let backgroundClass = mystyle.forsideTopIndhold; // En konstant, der indeholder styling for forsideTopIndhold
+
+    if (isDarkMode) { // Hvis dark mode er aktiveret (isDarkMode === true)
+        backgroundClass += " " + mystyle.darkMode; // Så tilføjes klassen darkmode til backgroundClass (så denne nu består af to klasser)
+    } else { // Hvis ikke dark mode er aktiveret
+        backgroundClass += " " + mystyle.lightMode; // Så tilføjes klassen lightmode til backgroundClass (så denne nu består af to klasser)
     }
-    // Ved at have to klasser tilføjet får de to billeder altså præcis samme styling (gennem forsideTopIndhold) og det er url'en til baggrundsbilledet der skifter med if-sætningen oven over
+    
 
     return (
         <>
@@ -44,14 +45,24 @@ export default function Forside() {
         
         <article>
             <section>
-                <h1>HVEM ER SCALE?</h1>
+                <h1 className={mystyle.forsideHovedoverskrift}>HVEM ER SCALE?</h1>
                 <p>Scale er et nyopstartet webbureau, der tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. Teamet består af to energiske/entusiastiske multimediedesignere, Pernille og Louise, der med deres fælles baggrunden inden for multimediedesign har et stort kendskab til digital udvikling.</p>
             </section>
+
             <aside>
-                <img src="Billede af Pernille" alt="Billede af Pernille, der er Head of Design hos Scale" />
-                <img src="Billede af Louise" alt="Billede af Louise, der er Head of Development hos Scale" />
+                <figure>
+                    <img src="Billede af Pernille" alt="Billede af Pernille, der er Head of Design hos Scale" />
+                    <figcaption>Pernille Christensen</figcaption>
+                </figure>
+                <figure>
+                    <img src="Billede af Louise" alt="Billede af Louise, der er Head of Development hos Scale" />
+                    <figcaption>Louise Mogensen</figcaption>
+                </figure>
             </aside>
         </article>
         </>
     );
 }
+
+
+

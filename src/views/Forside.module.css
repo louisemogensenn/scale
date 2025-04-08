@@ -36,3 +36,8 @@
   cursor: pointer; /* Gør det synligt, at området er klikbart */
   border: 1px dashed #000; /* Kant til at placere elementet */
 }
+
+.forsideHovedoverskrift {
+  left: 84px;
+  size: 50px;
+}
