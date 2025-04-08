@@ -1,0 +1,31 @@
+
+.kompetenceIndhold {
+    margin-left: 80px; /* Afstand til venstre kant */
+}
+
+.kompetenceIndhold h3 {
+    font-size: 20px; /* Skriftstørrelse for den mindste overskrift øverst */
+    margin-top: 190px; /* Afstand til logo i øverste venstre hjørne */
+}
+
+.kompetenceIndhold h1 {
+    margin: 10px 0 30px; /* Afstand til top, højre, bund og venstre*/
+    font-size: 50px; /* Skriftstørrelse */
+}
+
+.kompetenceIndhold p {
+    font-size: 22px; /* Skriftstørrelse for tekst */
+    width: 571px; /* Tekstfeltets bredde */
+    margin-bottom: 372px; /* Afstand til næste information */
+}
+
+.link, .kontaktlink {
+    text-decoration: underline;
+    color: inherit; /* Nedarver farver fra HTML */
+    font-size: 20px; /* To pixels mindre i font-størrelse end dens tilhørende tekst */
+}
+
+.kontaktlink {
+    font-size: 30px; /* Stylingen ovenover gælder - undtaget størrelsen, da dette er call to action */
+}
+
