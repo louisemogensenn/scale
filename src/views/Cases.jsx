@@ -1,5 +1,9 @@
 import mystyle from './Cases.module.css';
 import { Link } from 'react-router-dom';
+import lazarev from '../assets/lazarev.webp';
+import konkout from '../assets/konkout.webp';
+import rudyAudio from '../assets/rudyaudio.webp';
+import atmoslamp from '../assets/atmoslamp.webp';
 
 export default function Cases() {
     
@@ -25,12 +29,12 @@ export default function Cases() {
                     </section>
 
                     <figure>
-                        <img src="src/assets/lazarev.webp" alt="SCALE's case med Lazarev" />
+                        <img loading='lazy' src={lazarev} alt="SCALE's case med Lazarev" />
                         <figcaption>CASE: OPTIMERING AF EKSISTERENDE WEBSITE</figcaption>
                     </figure>
 
                     <figure>
-                        <img src="src/assets/konkout.webp" alt="SCALE's case med KONKOUT" />
+                        <img loading='lazy' src={konkout} alt="SCALE's case med KONKOUT" />
                         <figcaption>CASE: OPTIMERING AF EKSISTERENDE WEBSITE</figcaption>
                     </figure>
 
@@ -41,12 +45,12 @@ export default function Cases() {
                     </section>
 
                     <figure>
-                        <img src="src/assets/rudyaudio.webp" alt="SCALE's case med Ruby Audio" />
+                        <img loading='lazy' src={rudyAudio} alt="SCALE's case med Rudy Audio" />
                         <figcaption>CASE: OPTIMERING AF EKSISTERENDE WEBSITE</figcaption>
                     </figure>
 
                     <figure>
-                        <img src="src/assets/atmoslamp.webp" alt="SCALE's case med ATMOSLAMP" />
+                        <img loading='lazy' src={atmoslamp} alt="SCALE's case med ATMOSLAMP" />
                         <figcaption>CASE: OPTIMERING AF EKSISTERENDE WEBSITE</figcaption>
                     </figure>
 

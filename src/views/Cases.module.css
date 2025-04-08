@@ -26,8 +26,16 @@
     height: 278px; /* Bestemt højde for billeder for at øge optimering */
 }
 
+.casesIndhold img:hover {
+    cursor: pointer; /* Giver en effekt af, at billedet er klikbart */
+}
+
 .casesIndhold figcaption {
     margin-bottom: 59px; /* Afstand ned til nedre elementer under denne caption */
+}
+
+.casesIndhold figcaption:hover {
+    cursor: pointer; /* Giver en effekt af, at teksten er klikbar */
 }
 
 .tidligereCasesInfo h3 {
