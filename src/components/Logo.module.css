@@ -1,7 +1,11 @@
 
+.logolink {
+    color: inherit; /* Ændrer farven fra default til at arve fra HTML */
+}
+
 .topLogo {
     width: 169px; /* Bestemmer en fast bredde for bedre optimering */
     height: 50px; /* Bestemmer en fast højde for bedre optimering */
     margin: 30px; /* Skaber afstand til det omkringliggende */
-    color: var(--darkModeTekst);
+    color: inherit; /* Arver fra link, der nu arver fra HTML */
 }
