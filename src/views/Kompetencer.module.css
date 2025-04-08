@@ -1,6 +1,8 @@
 
 .kompetenceIndhold {
-    margin-left: 80px; /* Afstand til venstre kant */
+    margin: 0 80px; /* Afstand til venstre kant */
+    display: flex;
+    justify-content: space-between;
 }
 
 .kompetenceIndhold h3 {
