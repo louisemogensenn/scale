@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import mystyle from './Forside.module.css';
+import pernille from '../assets/IMG_5260.jpeg';
+import louise from '../assets/IMG_5260.jpeg';
+import bagScale from '../assets/teamScale.webp';
 
 export default function Forside() {
     const [isDarkMode, setIsDarkMode] = useState(true);
@@ -81,11 +84,11 @@ export default function Forside() {
 
                     <aside className={mystyle.forsidePortraetbilleder}>
                         <figure>
-                            <img src="src/assets/IMG_5260.jpeg" alt="Billede af Pernille, der er Head of Design hos Scale"/>
+                            <img loading='lazy' src={pernille} alt="Billede af Pernille, der er Head of Design hos Scale"/>
                             <figcaption>Pernille Christensen</figcaption>
                         </figure>
                         <figure>
-                            <img src="src/assets/IMG_5260.jpeg" alt="Billede af Louise, der er Head of Development hos Scale"/>
+                            <img loading='lazy' src={louise} alt="Billede af Louise, der er Head of Development hos Scale"/>
                             <figcaption>Louise Mogensen</figcaption>
                         </figure>
                     </aside>
@@ -109,7 +112,7 @@ export default function Forside() {
                 </article>
 
                 <article className={mystyle.kontaktOs}>
-                    <img src="src/assets/teamScale.webp" alt="Et billede af teamet bag SCALE" />
+                    <img loading='lazy' src={bagScale} alt="Et billede af teamet bag SCALE" />
                     <section className={mystyle.kontaktoverskriftOgTekst}>
                         <h1>KONTAKT OS</h1>
                         <p>Sammen udgør vi et stærkt team, der sættes din virksomhed i fokus! <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
