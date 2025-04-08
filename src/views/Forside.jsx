@@ -4,20 +4,23 @@ import mystyle from './Forside.module.css';
 export default function Forside() {
     const [isDarkMode, setIsDarkMode] = useState(true); 
     {/* 
-        Oprettelse af en state-variabel akldet isDarkMode med startværdien(initialværdi), true. Når komponenten først renderes, vil isDarkMode = true og dermed vil dark mode være aktiveret. isDarkMode er altså variablen, der holder styr på, om dark mode er aktiveret eller ej. 
+        Oprettelse af en state-variabel kaldet setIsDarkMode med startværdien(initialværdi), true. Når komponenten først renderes, vil isDarkMode = true og dermed vil dark mode være aktiveret. isDarkMode er altså variablen, der holder styr på, om dark mode er aktiveret eller ej. 
         setDarkMode er en funktion, der bruges til at opdatere isDarkMode (ændrer den fra true til false eller omvendt)
     */}
 
-    const toggleBaggrund = () => {
-        setIsDarkMode(nuvaerende => !nuvaerende);
+    //Funktionen toggleBaggrund defineres – det er den, der skifter værdien af isDarkMode (fra true til false eller omvendt).
+    const toggleBaggrund = () => { // Der oprettes en funktion (toggleBaggrund), hvis indhold med => (pilesynpaxen/arrow function) er defineret under den
+        const nyVaerdi = !isDarkMode; // // Opretter en konstant nyVaerdi, som sættes til det modsatte af isDarkMode ved hjælp af ! (true bliver false, og false bliver true)
+        setIsDarkMode(nyVaerdi); // Funktionen setIsDarkMode bliver kaldt med nyVaerdi som parameter for at opdatere isDarkMode til nyVærdi.
+    
+        if (nyVaerdi) { // Hvis nyVærdi er true (altså dark mode er aktiveret)
+            document.documentElement.style.backgroundColor = 'var(--darkModeBaggrund)'; // Angives baggrundsfarven
+            document.documentElement.style.color = 'var(--darkModeTekst)'; // Og tekstfarven
+        } else { //Hvis nyVærdi ikke er true og lightmode derfor er aktiveret
+            document.documentElement.style.backgroundColor = 'var(--lightModeBaggrund)'; // Angives baggrundsfarven
+            document.documentElement.style.color = 'var(--lightModeTekst)'; //Og tekstfarven
+        }
     };
-
-    {/*
-        Funktionen toggleBaggrund defineres - det er denne, der opdaterer værdien af isDarkMode.
-        setIsDarkMode betyder, at man skifter (altså toggler) den nuværende værdi af isDarkMode.
-        nuvaerende refererer til den nuværende værdi af isDarkMode og !nuvaerende inverter den (true bliver til false, false bliver til true)
-        Hver gang toggleBaggrund kaldes, ændres isDarkMode fra true til false eller fra false til true
-    */}
 
     // Brug klassisk if-sætning til at sammensætte className
     let backgroundClass = mystyle.forsideTopIndhold; /* Konstanten oprettes og får tildelt en css styling: mystyle.forsideTopIndhold */

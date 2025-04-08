@@ -20,6 +20,7 @@
 
 .navigationslink {
     transition: transform 0.3s ease; /* Definerer overgangen ved hover, der tager 0.3 sec, hvor ease = starter langsomt, accelererer og bremser langsomt. */
+    color: inherit;
 }
 
 .navigationslink:hover {
