@@ -1,6 +1,8 @@
 
 .casesIndhold {
-    margin-left: 80px; /* Afstand til venstre kant */
+    margin: 0 80px; /* Afstand til venstre og højre kant */
+    display: flex; /* Placerer elementer på linje */
+    justify-content: space-between; /* Med pladsen imellem sig */
 }
 
 .casesIndhold h3 {

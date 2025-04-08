@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 
 export default function Kompetencer() {
 
+    
+
     return (
         <>
             <article className={mystyle.kompetenceIndhold}>
@@ -102,9 +104,7 @@ export default function Kompetencer() {
                     </svg>
                     </aside>
 
-                    <aside>
-                        {/* HER SKAL MOTION GRAPHIS SÆTTES IND */}
-                    </aside>
+                    <aside className={mystyle.animation}></aside>
                 </article>
             </article>
             
