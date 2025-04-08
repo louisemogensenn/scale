@@ -31,12 +31,40 @@ import mystyle from './Forside.module.css';
     } else { // Hvis ikke dark mode er aktiveret
         backgroundClass += " " + mystyle.lightMode; // Så tilføjes klassen lightmode til backgroundClass (så denne nu består af to klasser)
     }
+
+    let svgColor; // En konstant, der skal bestemme farven for logoet (en svg-fil, der er placeret i midten af forsiden)
+    // Denne konstant bruges i linje, hvor <svg>-tagget starter og bruges for fyldefarve for SVG'en
+
+    if (isDarkMode) { // Hvis dark mode er aktiveret - dark mode === true
+        svgColor = 'var(--darkModeTekst'; // Så skal farven sættes til darkModeTekst (initialiseret i :root i index.css)
+    } else { // Hvis ikke dark mode er aktiveret (dark mode === false)
+        svgColor = 'var(--lightModeTekst)'; // Så skal farven sætes til lightModeTekst (initialiseret i :root i index.css)
+    }
     
 
     return (
         <>
         <section className={backgroundClass}> {/* Det er i denne sektion, baggrundsbilledet placeres */}
-            <img className={mystyle.forsideLogo} src="/src/assets/scaleLogo.svg" alt="Scale logo" />
+        <svg className={mystyle.forsideLogo} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 338.96 91.6" fill={svgColor}> {/* Generator: Adobe Illustrator 28.7.5, SVG Export Plug-In . SVG Version: 1.2.0 Build 176) */}
+            <g>
+                <g id="Layer_1">
+                    <g>
+                        <g>
+                            <g>
+                                <polygon points="176.34 56.97 168.7 38.99 163.86 56.81 176.34 56.97" fill="none" stroke="currentColor" stroke-miterlimit="10"/>
+                                <polygon points="168.7 38.99 168.7 38.99 168.7 38.99 168.7 38.99" fill="currentColor" stroke="currentColor" stroke-miterlimit="10"/>
+                                <polygon points="174.1 19.07 168.7 38.99 178.87 62.73 151.93 62.73 167.28 1.47 155.58 7.29 133.32 90.27 144.73 90.27 149.32 73.43 159.21 73.43 183.55 73.43 190.51 90.27 202.19 90.27 174.1 19.07" fill="currentColor" stroke="currentColor" stroke-miterlimit="10"/>
+                            </g>
+                            <line x1="163.86" y1="56.81" x2="151.93" y2="62.73" fill="none" stroke="currentColor" stroke-miterlimit="10"/>
+                            <polyline points="167.28 1.47 179.06 1.47 213.29 84.68 202.19 90.27" fill="none" stroke="currentColor" stroke-miterlimit="10"/>
+                            <polyline points="144.73 90.27 156.29 84.82 159.21 73.43" fill="none" stroke="currentColor" stroke-miterlimit="10"/>
+                        </g>
+                        <text transform="translate(-1.4 88.83)" fill="currentColor" font-family="TrebuchetMS, &apos;Trebuchet MS&apos;" font-size="120"><tspan x="0" y="0">SC</tspan><tspan x="129.49" y="0" letter-spacing=".06em"> </tspan><tspan x="172.84" y="0" letter-spacing=".07em"> </tspan><tspan x="217.4" y="0">LE</tspan></text>
+                    </g>
+                </g>
+            </g>
+        </svg>
+
             <p> Design med omtanke - Vi optimerer din digitale tilstedeværelse ved at kombinere æstetik, funktionalitet og performance. </p>
         </section>
 
