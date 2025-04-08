@@ -43,20 +43,15 @@ export default function Forside() {
         <section className={mystyle.skiftModeSektion} onClick={toggleBaggrund}> {/* Sektionen er tom, da vi ønsker den gennemsigtig */}</section>
         
         <article>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
-            <p>hej</p>
+            <section>
+                <h1>HVEM ER SCALE?</h1>
+                <p>Scale er et nyopstartet webbureau, der tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. Teamet består af to energiske/entusiastiske multimediedesignere, Pernille og Louise, der med deres fælles baggrunden inden for multimediedesign har et stort kendskab til digital udvikling.</p>
+            </section>
+            <aside>
+                <img src="Billede af Pernille" alt="Billede af Pernille, der er Head of Design hos Scale" />
+                <img src="Billede af Louise" alt="Billede af Louise, der er Head of Development hos Scale" />
+            </aside>
         </article>
         </>
-  );
+    );
 }
