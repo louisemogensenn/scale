@@ -4,10 +4,10 @@
   flex-direction: column; /* Placerer teksten på en vertikalt linje */
   justify-content: center; /* Placerer teksten i midten vertikalt */
   height: 100vh; /* Sørger for, at sektionen fylder hele højden af viewporten */
-  background-image: url('../assets/forsideBilledeDarkMode.webp'); /* Dit baggrundsbillede */
   background-size: cover; /* Fylder baggrunden */
   background-position: center; /* Billedet får samme midterpunkt som sin container */
   text-align: center; /* Placerer teksten i midten horisontalt */
+  transition: background-image 0.3s ease-in-out; /* Bruges til at animere skiftet mellem de to billeder */
 }
 
 .forsideLogo {
@@ -15,4 +15,24 @@
   height: 92px; /* Sætter en bestemt højde på logoet */
   filter: brightness(0) invert(1); /* Bruges til at påføre grafiske effekter, brightness = 0 gør elementet helt sort, invert(1) (100%) gør farven hvid */
   align-self: center; /* Elementet placeres i midten af skærmen */
+}
+
+.darkMode {
+  background-image: url('../assets/forsideBilledeDarkMode.webp'); /* Baggrundsbilledet i toppen af forsiden i dark mode */
+}
+
+.lightMode {
+  background-image: url('../assets/forsideBilledeLightMode.webp'); /* Baggrundsbilledet i toppen af forsiden i light mode */
+}
+
+.skiftModeSektion {
+  position: absolute; /* Placerer elementet oven på sit søskende-element (sektionen med baggrundsbilledet */
+  top: 0; /*Starter i toppen */
+  left: 50%; /* Flytter elementets venstre kant hen til midten af forælderens bredde */
+  transform: translateX(-50%); /* Trækker elementet 50% af dets egen bredde tilbage mod venstre, så det bliver præcist centreret horisontalt. Dette er nødvendigt, fordi `left: 50%` alene kun flytter **venstrekanten** til midten – ikke hele boksen */
+  width: 60%; /* Bredden på sektionen er 60% af skærmens bredde*/
+  height: 38%; /* Højden på sektionen er 38% aaf skærmens højde*/
+  /* z-index: 10; */
+  cursor: pointer; /* Gør det synligt, at området er klikbart */
+  border: 1px dashed #000; /* Kant til at placere elementet */
 }
