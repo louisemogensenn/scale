@@ -66,7 +66,7 @@ export default function Forside() {
                     </g>
                 </svg>
 
-                <p> Design med omtanke - Vi optimerer din digitale tilstedeværelse ved at kombinere æstetik, funktionalitet og performance. </p>
+                <p className={mystyle.tekstUnderLogo}> Design med omtanke - Vi optimerer din digitale tilstedeværelse ved at kombinere æstetik, funktionalitet og performance. </p>
             </section>
 
             {/* Den sektion, der kan klikkes på for at skifte mellem dark mode og light mode */}
@@ -110,7 +110,7 @@ export default function Forside() {
 
                 <article className={mystyle.kontaktOs}>
                     <img src="src/assets/teamScale.webp" alt="Et billede af teamet bag SCALE" />
-                    <section>
+                    <section className={mystyle.kontaktoverskriftOgTekst}>
                         <h1>KONTAKT OS</h1>
                         <p>Sammen udgør vi et stærkt team, der sættes din virksomhed i fokus! <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
                     </section>

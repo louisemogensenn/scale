@@ -1,0 +1,7 @@
+
+.topLogo {
+    width: 169px; /* Bestemmer en fast bredde for bedre optimering */
+    height: 50px; /* Bestemmer en fast højde for bedre optimering */
+    margin: 30px; /* Skaber afstand til det omkringliggende */
+    color: var(--darkModeTekst);
+}

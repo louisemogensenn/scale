@@ -11,6 +11,7 @@
     padding: 0; /* Nulstiller al padding for siden */
     margin: 0; /* Nulstiller al margin for siden */
     text-decoration: none;
+    line-height: 30px;
 }
 
 html {

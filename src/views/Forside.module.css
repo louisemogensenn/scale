@@ -16,6 +16,12 @@
   align-self: center; /* Elementet placeres i midten af skærmen */
 }
 
+.tekstUnderLogo {
+  width: 386px; /* Bredden for tekst-containeren */
+  align-self: center; /* Elementet placeres i midten */
+  margin-top: 40px; /* Afstand mellem tekst og logo */
+}
+
 .darkModeBillede {
   background-image: url('../assets/forsideBilledeDarkMode.webp'); /* Baggrundsbilledet i toppen af forsiden i dark mode */
 }
@@ -33,7 +39,7 @@
   height: 38%; /* Højden på sektionen er 38% aaf skærmens højde*/
   /* z-index: 10; */
   cursor: pointer; /* Gør det synligt, at området er klikbart */
-  border: 1px dashed #000; /* Kant til at placere elementet */
+  /* border: 1px dashed #000; /* Kant til at placere elementet */
 }
 
 /* STYLING AF INDHOLD PÅ FORSIDE */
@@ -56,7 +62,6 @@
 .infoOmScale {
   width: 403px; /* Bredden på tekstfeltet*/
   margin-top: 40px; /* Afstand til dens tilhørende overskrift*/
-  line-height: 30px; /* Linjeafstand */
   font-size: 22px; /* Skriftstørrelsen for teksten */
 }
 
@@ -80,7 +85,6 @@
 
 .infoboks {
   width: 320px; /* Bredden på tekstboksen*/
-  line-height: 30px; /* Linjeafstand i tekstboksen*/
   font-size: 20px; /* Brødteksens font-størrelse */
 }
 
@@ -102,6 +106,11 @@
   margin-bottom: 137px;
 }
 
+.kontaktoverskriftOgTekst {
+  width: 401px; /* Bredden for containeren */
+  margin-right: 66px; /* Yderligere afstand til kant */
+}
+
 .kontaktOs img {
   width: 534px; /* Bestemt bredde på billedet for bedre optimering */
   height: 439px; /* Bestemt højde på billedet for bedre optimering */
@@ -109,4 +118,5 @@
 
 .kontaktOs h1 {
   font-size: 50px; /* Bestem skriftstørrelse for overskriften 'KONTAKT OS' */
+  margin-bottom: 30px; /* Afstand mellem overskrift KONTAKT OS og tekst */
 }
