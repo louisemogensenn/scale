@@ -1,0 +1,52 @@
+
+.casesIndhold {
+    margin-left: 80px; /* Afstand til venstre kant */
+}
+
+.casesIndhold h3 {
+    font-size: 20px; /* Skriftstørrelse for den mindste overskrift øverst */
+    margin-top: 190px; /* Afstand til logo i øverste venstre hjørne */
+}
+
+.casesIndhold h1 {
+    margin: 10px 0 30px; /* Afstand til top, højre, bund og venstre*/
+    font-size: 50px; /* Skriftstørrelse */
+}
+
+.casesIndhold p {
+    font-size: 22px; /* Skriftstørrelse for tekst */
+    width: 571px; /* Tekstfeltets bredde */
+    margin-bottom: 372px; /* Afstand til næste information */
+}
+
+.casesIndhold img {
+    width: 560px; /* Bestemt bredde for billeder for at øge optimering */
+    height: 278px; /* Bestemt højde for billeder for at øge optimering */
+}
+
+.casesIndhold figcaption {
+    margin-bottom: 59px; /* Afstand ned til nedre elementer under denne caption */
+}
+
+.tidligereCasesInfo h3 {
+    margin-top: 350px; /* Afstand til ovenstående elementer */
+}
+
+.tidligereCasesInfo p {
+    margin-bottom: 125px; /* Afstand til nedstående elementer */
+}
+
+.kontaktInfo {
+    margin-top: 200px; /* Afstand til elementer over */
+    width: 556px; /* Bredden på elementet med tekst */
+}
+
+.kontaktInfo p {
+    font-size: 35px; /* Bestemt fontstørrelse for dette tekst */
+}
+
+.link {
+    text-decoration: underline; /* Linje under links */
+    color: inherit; /* Nedarver farver fra HTML */
+    font-size: 20px; /* To pixels mindre i font-størrelse end dens tilhørende tekst */
+}
