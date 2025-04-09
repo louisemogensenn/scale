@@ -7,6 +7,7 @@ import ScrollTilTop from "./components/ScrollTilTop";
 export default function Layout() {
 
     const nuvaerendeLokation = useLocation();  // Brug useLocation til at få den nuværende rute
+    
     const paaForside = nuvaerendeLokation.pathname === '/';  // Tjek om vi er på forsiden ved brug af sammenligningsoperator
 
     return(
