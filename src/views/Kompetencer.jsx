@@ -113,10 +113,6 @@ export default function Kompetencer() {
                         <Lottie options={options} height={500} width={500} />
                     </aside>
 
-                    <aside className={mystyle.motionGraphicDarkMode}>
-                        <Lottie options={options} height={500} width={500} />
-                    </aside>
-
                 </article>
             </article>
             
