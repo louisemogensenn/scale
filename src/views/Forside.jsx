@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import mystyle from './Forside.module.css';
-import pernille from '../assets/IMG_5260.jpeg';
-import louise from '../assets/IMG_5260.jpeg';
+import pernille from '../assets/scale-pernille.webp';
+import louise from '../assets/scale-louise.webp';
 import bagScale from '../assets/teamScale.webp';
 
 export default function Forside() {
@@ -79,7 +79,7 @@ export default function Forside() {
                 <article className={mystyle.tekstOgPortraetbilleder}>
                     <section className={mystyle.scaleInfoOverskriftOgTekst}>
                         <h1 className={mystyle.forsideHovedoverskrift}>HVEM ER SCALE?</h1>
-                        <p className={mystyle.infoOmScale}>Scale er et nyopstartet webbureau, der tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. Teamet består af to energiske/entusiastiske multimediedesignere, Pernille og Louise, der med deres fælles baggrunden inden for multimediedesign har et stort kendskab til digital udvikling.</p>
+                        <p className={mystyle.infoOmScale}>SCALE opstod ud fra en vigtig erkendelse: Internettet er en af verdens største CO₂-udledere, og alt for få virksomheder er bevidste om ders hjemmesiders energiforbrug. <br /> <br /> Det vil vi ændre på! Derfor grundlagde vi SCALE – et webbureau, der specialiserer sig i energieffektivt webdesign. <br /> <br /> Bag SCALE står Pernille og Louise – to energiske og entusiastiske specialister med en fælles baggrund i multimediedesign og stærke kompetencer inden for digital udvikling. </p>
                     </section>
 
                     <aside className={mystyle.forsidePortraetbilleder}>
@@ -115,7 +115,7 @@ export default function Forside() {
                     <img loading='lazy' src={bagScale} alt="Et billede af teamet bag SCALE" />
                     <section className={mystyle.kontaktoverskriftOgTekst}>
                         <h1>KONTAKT OS</h1>
-                        <p>Sammen udgør vi et stærkt team, der sættes din virksomhed i fokus! <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
+                        <p>Sammen udgør vi et stærkt team, der sættes din virksomhed i fokus! <br /> <br /> Vi tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. <br /> <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
                     </section>
                 </article>
             </article>

@@ -60,14 +60,15 @@
 }
 
 .infoOmScale {
-  width: 403px; /* Bredden på tekstfeltet*/
+  width: 501px; /* Bredden på tekstfeltet*/
   margin-top: 40px; /* Afstand til dens tilhørende overskrift*/
-  font-size: 22px; /* Skriftstørrelsen for teksten */
+  font-size: 21px; /* Skriftstørrelsen for teksten */
 }
 
 .forsidePortraetbilleder {
   display: flex; /* Placerer billederne på linje */
   justify-content: space-around; /* Plads imellem sig */
+  align-items: flex-end;
   gap: 31px; /* Afstanden mellem billederne */
 }
 

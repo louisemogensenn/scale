@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
 import {Outlet, useLocation} from "react-router-dom";
+import ScrollTilTop from "./components/ScrollTilTop";
 
 export default function Layout() {
 
@@ -10,6 +11,9 @@ export default function Layout() {
 
     return(
         <>
+
+        <ScrollTilTop />
+
         {!paaForside && <Logo /> /* Hvis vi IKKE er på forsiden vises komponenten */}
 
         <Navigation />
