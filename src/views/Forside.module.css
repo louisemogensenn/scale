@@ -51,7 +51,7 @@
   border-right: 1px solid; /* Giver h1 en kant i sin højre side */
   color: inherit; /* Farven på kanten (og h1) nedarver fra HTML */
   padding-right: 10px; /* h1 får en padding, så kanten forskydes 10px til højre */
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Skaber afstand mellem h1 og teksten under */
 }
 
 .hoverBesked {
