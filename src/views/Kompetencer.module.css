@@ -18,7 +18,7 @@
 .kompetenceIndhold p {
     font-size: 22px; /* Skriftstørrelse for tekst */
     width: 571px; /* Tekstfeltets bredde */
-    margin-bottom: 372px; /* Afstand til næste information */
+    margin-bottom: 400px; /* Afstand til næste information */
 }
 
 .link, .kontaktlink {
@@ -31,3 +31,10 @@
     font-size: 30px; /* Stylingen ovenover gælder - undtaget størrelsen, da dette er call to action */
 }
 
+.kompetencerVisuel {
+    flex-direction: column; /* Placerer de to flex-elementer på række vertikalt */
+}
+
+.motionGraphic {
+    margin-top: 217px; /* Afstand mellem infografik og motion graphic */
+}
