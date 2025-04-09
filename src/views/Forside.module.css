@@ -37,9 +37,8 @@
   transform: translateX(-50%); /* Trækker elementet 50% af dets egen bredde tilbage mod venstre, så det bliver præcist centreret horisontalt. Dette er nødvendigt, fordi `left: 50%` alene kun flytter **venstrekanten** til midten – ikke hele boksen */
   width: 60%; /* Bredden på sektionen er 60% af skærmens bredde*/
   height: 38%; /* Højden på sektionen er 38% aaf skærmens højde*/
-  /* z-index: 10; */
   cursor: pointer; /* Gør det synligt, at området er klikbart */
-  /* border: 1px dashed #000; /* Kant til at placere elementet */
+  /* border: 1px solid #ff0000; /* Kant til at placere elementet */
 }
 
 .hoverBesked section {
