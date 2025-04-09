@@ -12,15 +12,15 @@ export default function Layout() {
     return(
         <>
 
-        <ScrollTilTop />
+        <ScrollTilTop /> {/* Komponenten scroll til top, der indeholder funktionalitet og skal fungere på alle sider */}
 
-        {!paaForside && <Logo /> /* Hvis vi IKKE er på forsiden vises komponenten */}
+        {!paaForside && <Logo /> /* Hvis vi IKKE er på forsiden vises komponenten (logo i venstre hjørne), der ellers vises på alle sider */}
 
-        <Navigation />
+        <Navigation /> {/* Komponenten Navigation, der skal vises på alle sider */}
         <main>
-            <Outlet />
+            <Outlet /> {/* Alt indholdet, der skifter ved klik på her side */}
         </main>
-        <Footer />
+        <Footer /> {/* Komponenten Footer, der skal vises på alle sider */}
         </>
     )
 }

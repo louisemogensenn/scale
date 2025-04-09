@@ -26,3 +26,7 @@
 .navigationslink:hover {
     transform: scale(1.1);  /* Teksten skaleres op med en faktor på 1.1 (stigning på 10%) - refererer til den transform, der er angivet oven over */
 }
+
+.aktiv {
+    font-weight: bolder; /* Når man er på siden er teksten i navigationen federe */
+}
