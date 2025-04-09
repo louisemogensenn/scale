@@ -14,7 +14,7 @@ export default function Kompetencer() {
                     <section className={mystyle.kompetenceInfo}>
                         <h3>KOMPETENCER</h3>
                         <h1>VI HAR KOMPETENCERNE</h1>
-                        <p>SCALE er meget mere end blot et webbureau i Aarhus - vi er en samarbejdspartner. Og sammen med jer kan vi med garanti skabe de helt rette løsninger for netop jeres virksomhed.</p>
+                        <p>Vi hjælper små virksomheder med at skalere deres digitale tilstedeværelse - uden at skalere deres Co2-aftryk. <br /> <br /> Vores mål er at gøre energieffektivt webdesign til en standard, ikke en trend. Vi designer og optimerer hjemmesider, der er hurtigere, lettere og bedre - uden at gå på kompromis, med funktionalitet eller æstetik. </p>
                     </section>
 
                     <section>

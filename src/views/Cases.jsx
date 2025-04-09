@@ -14,7 +14,7 @@ export default function Cases() {
                     <section>
                         <h3>CASES</h3>
                         <h1>VI BYGGER MED OMTANKE</h1>
-                        <p>Vi samarbejder med hostingudbydere, der tænker ansvarligt, og vi vælger tekniske løsninger, der ikke kræver unødvendige ressourcer. <br /> <br /> Det betyder, at når dine kunder besøger din side, der er udviklet af os, trækkes der på færre serverer - Hvilket betyder, at der bruges mindre strøm. </p>
+                        <p>Vi samarbejder med hostingudbydere, der tænker ansvarligt, og vi vælger tekniske løsninger, der ikke kræver unødvendige ressourcer. <br /> <br /> SCALE er meget mere end blot et webbureau i Aarhus - vi er en samarbejdspartner. Og sammen med jer kan vi med garanti skabe de helt rette løsninger for netop jeres virksomhed. </p>
                     </section>
 
                     <section>

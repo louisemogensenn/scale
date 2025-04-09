@@ -1,4 +1,6 @@
 import mystyle from './Kontakt.module.css';
+import scaleLouise from '../assets/scale-louise.webp';
+import scalePernille from '../assets/scale-pernille.webp';
 
 export default function Kontakt() {
     
@@ -28,7 +30,7 @@ export default function Kontakt() {
 
                 <section className={mystyle.medarbejdere}>
                     <figure>
-                        <img src="src/assets/IMG_5260.jpeg" alt="Billede af Pernille Christensen, Head Of Design, Scale" />
+                        <img src={scalePernille} alt="Billede af Pernille Christensen, Head Of Design, Scale" />
                         <figcaption className={mystyle.navnUnderBillede}>Pernille Christensen</figcaption>
                         <p className={mystyle.titel}>Head of Design</p>
                         <p>pernillechristensen@scale.dk</p>
@@ -36,7 +38,7 @@ export default function Kontakt() {
                     </figure>
 
                     <figure>
-                        <img src="src/assets/IMG_5260.jpeg" alt="Billede af Louise Mogensen, Head Of Development, Scale" />
+                        <img src={scaleLouise} alt="Billede af Louise Mogensen, Head Of Development, Scale" />
                         <figcaption className={mystyle.navnUnderBillede}>Louise Mogensen</figcaption>
                         <p className={mystyle.titel}>Head of Development</p>
                         <p>louisemogensen@scale.dk</p>
