@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import mystyle from './Forside.module.css';
-import darkModeBillede from '../assets/forsideBilledeDarkMode.webp';
-import lightModeBillede from '../assets/forsideBilledeLightMode.webp';
 import pernille from '../assets/scale-pernille.webp';
 import louise from '../assets/scale-louise.webp';
 import bagScale from '../assets/teamScale.webp';
@@ -28,17 +26,20 @@ export default function Forside() {
         }
     }, [isDarkMode]); // dependencies array - useEffect-funktionen kører hver gang isDarkMode ændrer sig.
     
-    let baggrundsBillede = "";
-    
-    if (isDarkMode) {
-        baggrundsBillede = darkModeBillede;
-    } else {
-        baggrundsBillede = lightModeBillede;
+    // useEffect kører hver gang isDarkMode ændrer sig
+
+    // Nedstående bruges til at skifte forsidebilledet
+    let backgroundClass = mystyle.forsideTopIndhold; // En konstant, der indeholder styling for forsideTopIndhold
+
+    if (isDarkMode) { // Hvis dark mode er aktiveret (isDarkMode === true)
+        backgroundClass += " " + mystyle.darkModeBillede; // Så tilføjes klassen darkmode til backgroundClass (så denne nu består af to klasser)
+    } else { // Hvis ikke dark mode er aktiveret
+        backgroundClass += " " + mystyle.lightModeBillede; // Så tilføjes klassen lightmode til backgroundClass (så denne nu består af to klasser)
     }
     
     return (
         <>
-            <section className={mystyle.forsideTopIndhold} style={{backgroundImage: `url(${baggrundsBillede})`}}> {/* Det er i denne sektion, baggrundsbilledet placeres  - ${} er et JavaScript-koncept (template literals), der gør det muligt at indsætte værdien af en variabel i en streng.*/}
+            <section className={backgroundClass}> {/* Det er i denne sektion, baggrundsbilledet placeres */}
                 <svg className={mystyle.forsideLogo} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 338.96 91.6" fill="currentColor"> {/* Generator: Adobe Illustrator 28.7.5, SVG Export Plug-In . SVG Version: 1.2.0 Build 176) */}
                     <g>
                         <g id="Layer_1">
