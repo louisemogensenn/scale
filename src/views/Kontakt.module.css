@@ -50,6 +50,23 @@
     margin-bottom: 0; /* Fjerner den margin, der ellers er sat på p */
 }
 
+.scaleSocialeMedier {
+    display: flex; /* Placerer tekst og ikoner på horisontal linje */
+    gap: 55px; /* Skaber en afstand mellem tekst og ikoner */
+    align-items: flex-end; /* Flytter teksten til bunden af sin container */
+    margin-top: 10px; /* Skaber afstand mellem tekstens container og top */
+}
+
+.scaleSocialeMedier figure {
+    display: flex; /* Gør det muligt at placere ikonerne i bunden af deres egen container */
+    align-items: flex-end; /* Palcerer ikonerne i bunden af deres egen container */
+    gap: 25px; /* Skaber afstand mellem ikonerne */
+}
+
+.scaleSocialeMedier figure svg:hover {
+    cursor: pointer; /* Skaber en fornemmelse af, at ikonerne er klikbare */
+}
+
 /* STYLING AF BILLEDER OG NEDEFTER */
 
 .medarbejdere {
