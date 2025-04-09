@@ -75,6 +75,15 @@ export default function Forside() {
             {/* Den sektion, der kan klikkes på for at skifte mellem dark mode og light mode */}
             <section className={mystyle.skiftModeSektion} onClick={toggleBaggrund}> {/* Sektionen er tom, da vi ønsker den gennemsigtig */}</section>
 
+            <aside className={mystyle.hoverBesked} onClick={toggleBaggrund}>
+                <section>
+                    <h1>KLIK HER</h1>
+                    <p>Skift mellem dark- og light mode</p>
+                </section>
+
+                <p>Vidste du... At studier har vist, at dark mode kan spare op til 60% <br /> batteri ved lav lysstyrke på OLED-skærme?</p>
+            </aside>
+
             <article className={mystyle.tekstOgBilledeIndhold}>
                 <article className={mystyle.tekstOgPortraetbilleder}>
                     <section className={mystyle.scaleInfoOverskriftOgTekst}>

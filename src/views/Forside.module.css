@@ -42,6 +42,36 @@
   /* border: 1px dashed #000; /* Kant til at placere elementet */
 }
 
+.hoverBesked section {
+  display: flex; /* Placerer de to teskter på linje */
+  gap: 10px; /* Skaber afstanden mellem de to tekster */
+}
+
+.hoverBesked h1 {
+  border-right: 1px solid; /* Giver h1 en kant i sin højre side */
+  color: inherit; /* Farven på kanten (og h1) nedarver fra HTML */
+  padding-right: 10px; /* h1 får en padding, så kanten forskydes 10px til højre */
+  margin-bottom: 20px;
+}
+
+.hoverBesked {
+  display: none; /* Teksten er skjult i default */
+  position: absolute; /* Gør det muligt at positionere elementet oven på den usynlige boks */
+  top: 50px; /* Placerer elementet 150px fra toppen */
+  left: 50%; /* Flytter elementets venstre kant hen til midten af forælderens bredde */
+  transform: translateX(-50%); /* Trækker elementet 50% af dets egen bredde tilbage mod venstre, så det bliver præcist centreret horisontalt. Dette er nødvendigt, fordi `left: 50%` alene kun flytter **venstrekanten** til midten – ikke hele boksen */
+  flex-direction: column; /* Placerer elementerne oven på hinanden vertikalt */
+  text-align: center; /* Placerer teksten i midten vertikalt */
+  align-items: center; /* Placerer teksten i midten vertikalt */
+  color: inherit; /* Nedarver tekstfarve fra HTML */
+  filter: invert(1); /* Giver den omvendte tekstfarve */
+  pointer-events: none; /* Gør det muligt, at teksten forbliver synlig, når musen kommer ind i tekstfeltet */
+}
+
+.skiftModeSektion:hover + .hoverBesked {
+  display: flex;
+}
+
 /* STYLING AF INDHOLD PÅ FORSIDE */
 
 .tekstOgBilledeIndhold {
