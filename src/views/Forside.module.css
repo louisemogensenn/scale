@@ -22,14 +22,6 @@
   margin-top: 40px; /* Afstand mellem tekst og logo */
 }
 
-.darkModeBillede {
-  background-image: url('../assets/forsideBilledeDarkMode.webp'); /* Baggrundsbilledet i toppen af forsiden i dark mode */
-}
-
-.lightModeBillede {
-  background-image: url('../assets/forsideBilledeLightMode.webp'); /* Baggrundsbilledet i toppen af forsiden i light mode */
-}
-
 .skiftModeSektion {
   position: absolute; /* Placerer elementet oven på sit søskende-element (sektionen med baggrundsbilledet */
   top: 0; /*Starter i toppen */
