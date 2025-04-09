@@ -151,3 +151,14 @@
   font-size: 50px; /* Bestem skriftstørrelse for overskriften 'KONTAKT OS' */
   margin-bottom: 30px; /* Afstand mellem overskrift KONTAKT OS og tekst */
 }
+
+.link {
+  color: inherit; /* <Link> skal nedarver farve fra index.css */
+}
+
+.callToAction {
+  margin-top: 20px; /* Skaber afstand til brødtekst */
+  font-size: 25px; /* Større skrift*/
+  text-decoration: underline; /* Giver underline */
+  color: inherit; /* Nedarver farve fra link */
+}

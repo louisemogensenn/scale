@@ -3,6 +3,7 @@ import mystyle from './Forside.module.css';
 import pernille from '../assets/scale-pernille.webp';
 import louise from '../assets/scale-louise.webp';
 import bagScale from '../assets/teamScale.webp';
+import { Link } from 'react-router-dom';
 
 export default function Forside() {
     const [isDarkMode, setIsDarkMode] = useState(true);
@@ -12,7 +13,7 @@ export default function Forside() {
 
     //Funktionen toggleBaggrund defineres – det er den, der skifter værdien af isDarkMode (fra true til false eller omvendt).
     const toggleBaggrund = () => { //Der oprettes en funktion (toggleBaggrund), hvis indhold med => (pilesynpaxen/arrow function) er defineret under den
-    setIsDarkMode(nuvaerende => !nuvaerende); // Funktionen med parameteren nuvaerende skal returnere det modsatte af nuvaerende i funktionen
+        setIsDarkMode(nuvaerende => !nuvaerende); // Funktionen med parameteren nuvaerende skal returnere det modsatte af nuvaerende i funktionen
     };
 
     useEffect(() => { // Funktionen, der er angivet herunder køres, når komponenten Forside.jsx er renderet
@@ -35,21 +36,11 @@ export default function Forside() {
     } else { // Hvis ikke dark mode er aktiveret
         backgroundClass += " " + mystyle.lightModeBillede; // Så tilføjes klassen lightmode til backgroundClass (så denne nu består af to klasser)
     }
-
-    // Nedstående bruges til at skifte farven på logoet
-    let svgColor; // En konstant, der skal bestemme farven for logoet (en svg-fil, der er placeret i midten af forsiden)
-    // Denne konstant bruges i linje, hvor <svg>-tagget starter og bruges for fyldefarve for SVG'en
-
-    if (isDarkMode) { // Hvis dark mode er aktiveret - dark mode === true
-            svgColor = 'var(--darkModeTekst)'; // Så skal farven sættes til darkModeTekst (initialiseret i :root i index.css)
-    } else { // Hvis ikke dark mode er aktiveret (dark mode === false)
-        svgColor = 'var(--lightModeTekst)'; // Så skal farven sætes til lightModeTekst (initialiseret i :root i index.css)
-    }
     
     return (
         <>
             <section className={backgroundClass}> {/* Det er i denne sektion, baggrundsbilledet placeres */}
-                <svg className={mystyle.forsideLogo} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 338.96 91.6" fill={svgColor}> {/* Generator: Adobe Illustrator 28.7.5, SVG Export Plug-In . SVG Version: 1.2.0 Build 176) */}
+                <svg className={mystyle.forsideLogo} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 338.96 91.6" fill="currentColor"> {/* Generator: Adobe Illustrator 28.7.5, SVG Export Plug-In . SVG Version: 1.2.0 Build 176) */}
                     <g>
                         <g id="Layer_1">
                             <g>
@@ -125,6 +116,9 @@ export default function Forside() {
                     <section className={mystyle.kontaktoverskriftOgTekst}>
                         <h1>KONTAKT OS</h1>
                         <p>Sammen udgør vi et stærkt team, der sættes din virksomhed i fokus! <br /> <br /> Vi tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. <br /> <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
+                        <Link className={mystyle.link} to="/kontakt">
+                            <p className={mystyle.callToAction}>Kontakt os her!</p>
+                        </Link>
                     </section>
                 </article>
             </article>
