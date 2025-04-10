@@ -8,12 +8,14 @@
   background-position: center; /* Billedet får samme midterpunkt som sin container */
   text-align: center; /* Placerer teksten i midten horisontalt */
   transition: background-image 0.3s ease-in-out; /* Bruges til at animere skiftet mellem de to billeder */
+  margin-bottom: 50px; /* Der skubbes til indholdet, der er under (HVEM ER SCALE?)*/
 }
 
 .forsideLogo {
   width: 340px; /* Sætter en bestemt bredde på logoet */
   height: 92px; /* Sætter en bestemt højde på logoet */
   align-self: center; /* Elementet placeres i midten af skærmen */
+  margin-top: 300px; /* Logo placeres længere nede på siden */
 }
 
 .tekstUnderLogo {
@@ -161,3 +163,15 @@
   text-decoration: underline; /* Giver underline */
   color: inherit; /* Nedarver farve fra link */
 }
+
+.billedeHoverBesked {
+  display: none;
+  text-align: center; /* Placerer teksten i midten vertikalt */
+  align-items: right; /* Placerer teksten i midten vertikalt */
+  color: inherit; /* Nedarver tekstfarve fra HTML */
+}
+
+.forsidePortraetbilleder img:hover + .billedeHoverBesked {
+  display: block;
+}
+

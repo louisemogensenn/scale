@@ -16,7 +16,7 @@
 }
 
 .kontaktIndhold h1 {
-    margin: 10px 0 30px; /* Afstand til top, højre, bund og venstre*/
+    margin: 10px 0 60px; /* Afstand til top, højre, bund og venstre*/
     font-size: 50px; /* Skriftstørrelse */
 }
 
@@ -71,8 +71,7 @@
 
 .medarbejdere {
     display: flex; /* Elementerne stilles på linje */
-    justify-content: space-between; /* Med pladsen imellem sig */
-    margin: 0 95px; /* Med 95 px ud til hver skærmkant */
+    justify-content: flex-start; /* Placeres i starten af containeren (venstre) */
 }
 
 .kontaktIndhold img {

@@ -72,7 +72,11 @@ export default function Forside() {
                     <p>Skift mellem dark- og light mode</p>
                 </section>
 
-                <p>Vidste du... At studier har vist, at dark mode kan spare op til 60% <br /> batteri ved lav lysstyrke på OLED-skærme?</p>
+                <p>Vidste du... At studier har vist, at dark mode kan spare op til 47% <br /> strøm på OLED-skærme?</p>
+            </aside>
+
+            <aside className={mystyle.billedeHoverBesked}>
+                <p>Vidste du, at farve på skærmen <br /> også påvirker din computers strømforbrug?</p>
             </aside>
 
             <article className={mystyle.tekstOgBilledeIndhold}>

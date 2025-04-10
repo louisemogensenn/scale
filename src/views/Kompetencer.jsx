@@ -34,7 +34,7 @@ export default function Kompetencer() {
                     <section className={mystyle.kompetenceInfo}>
                         <h3>KOMPETENCER</h3>
                         <h1>VI HAR KOMPETENCERNE</h1>
-                        <p>Vi hjælper små virksomheder med at skalere deres digitale tilstedeværelse - uden at skalere deres Co2-aftryk. <br /> <br /> Vores mål er at gøre energieffektivt webdesign til en standard, ikke en trend. Vi designer og optimerer hjemmesider, der er hurtigere, lettere og bedre - uden at gå på kompromis, med funktionalitet eller æstetik. </p>
+                        <p>Vi hjælper små virksomheder med at skalere deres digitale tilstedeværelse. Vores mål er at gøre energieffektivt webdesign til en standard, ikke en trend. <br /> <br /> Vi designer og optimerer hjemmesider, der er hurtigere, lettere og bedre - uden at gå på kompromis, med funktionalitet eller æstetik. <br /> <br /> Vi sammensætter løsninger, som passer præcist til dig og din virksomhed. Du behøver ikke have kompetencerne - Dét har vi!</p>
                     </section>
 
                     <section>

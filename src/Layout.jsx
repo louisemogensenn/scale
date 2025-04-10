@@ -18,8 +18,8 @@ export default function Layout() {
         {!paaForside && <Logo /> /* Hvis vi IKKE er på forsiden vises komponenten (logo i venstre hjørne), der ellers vises på alle sider */}
 
         <Navigation /> {/* Komponenten Navigation, der skal vises på alle sider */}
-        <main>
-            <Outlet /> {/* Alt indholdet, der skifter ved klik på her side */}
+        <main> 
+            <Outlet /> {/* Alt indholdet, der skifter ved klik - henviser til siden main */}
         </main>
         <Footer /> {/* Komponenten Footer, der skal vises på alle sider */}
         </>
