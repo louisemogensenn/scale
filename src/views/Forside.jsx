@@ -111,7 +111,7 @@ export default function Forside() {
 
                     <section className={mystyle.infoboks}>
                         <h2>LANGTIDSHOLDBART</h2>
-                        <p>Vi prioiterer at skabe løsninger, der ikke kun opfylder dit behov i dag, men også forbereder dig på fremtidens krav, i morgen. <br /> <br /> Vi designer med fleksibilitet i tankerne, så du nemt kan opdatere og vedligeholde din digitale platforme, hvilket forhindrer behovet for hyppige store ombygninger og dermed sparer ressourcer. </p>
+                        <p>Vi prioiterer at skabe løsninger, der ikke kun opfylder dit behov i dag, men også forbereder dig på fremtidens krav, i morgen. <br /> <br /> Vi designer med fleksibilitet i tankerne, så du nemt kan opdatere og vedligeholde dine digitale platforme, hvilket forhindrer behovet for hyppige store ombygninger og dermed sparer ressourcer. </p>
                     </section>
                 </article>
 
@@ -119,7 +119,7 @@ export default function Forside() {
                     <img loading='lazy' src={bagScale} alt="Et billede af teamet bag SCALE" />
                     <section className={mystyle.kontaktoverskriftOgTekst}>
                         <h1>KONTAKT OS</h1>
-                        <p>Sammen udgør vi et stærkt team, der sættes din virksomhed i fokus! <br /> <br /> Vi tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. <br /> <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
+                        <p>Sammen udgør vi et stærkt team, der sætter din virksomhed i fokus! <br /> <br /> Vi tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. <br /> <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
                         <Link className={mystyle.link} to="/kontakt">
                             <p className={mystyle.callToAction}>Kontakt os her!</p>
                         </Link>
