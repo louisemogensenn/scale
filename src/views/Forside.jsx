@@ -83,7 +83,7 @@ export default function Forside() {
                 <article className={mystyle.tekstOgPortraetbilleder}>
                     <section className={mystyle.scaleInfoOverskriftOgTekst}>
                         <h1 className={mystyle.forsideHovedoverskrift}>HVEM ER SCALE?</h1>
-                        <p className={mystyle.infoOmScale}>SCALE opstod ud fra en vigtig erkendelse: Internettet er en af verdens største CO₂-udledere, og alt for få virksomheder er bevidste om ders hjemmesiders energiforbrug. <br /> <br /> Det vil vi ændre på! Derfor grundlagde vi SCALE – et webbureau, der specialiserer sig i energieffektivt webdesign. <br /> <br /> Bag SCALE står Pernille og Louise – to energiske og entusiastiske specialister med en fælles baggrund i multimediedesign og stærke kompetencer inden for digital udvikling. </p>
+                        <p className={mystyle.infoOmScale}>SCALE opstod ud fra en vigtig erkendelse: Internettet er en af verdens største CO₂-udledere, og alt for få virksomheder er bevidste om deres hjemmesiders energiforbrug. <br /> <br /> Det vil vi ændre på! Derfor grundlagde vi SCALE – et webbureau, der specialiserer sig i energieffektivt webdesign. <br /> <br /> Bag SCALE står Pernille og Louise – to energiske og entusiastiske specialister med en fælles baggrund i multimediedesign og stærke kompetencer inden for digital udvikling. </p>
                     </section>
 
                     <aside className={mystyle.forsidePortraetbilleder}>
