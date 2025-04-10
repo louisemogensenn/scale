@@ -1,14 +1,29 @@
 import mystyle from './Kompetencer.module.css';
 import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
-import animation from '../assets/motion-graphic.json';
+import animation from '../assets/motion-graphic-hvid.json';
+import { useRef } from 'react';
 
 export default function Kompetencer() {
 
-    const options = {
-        animationData: animation,
-        loop: true,
-        autoplay: true
+    const motionGraphic = useRef(null); // I konstanten gemmes en værdi - værdien kan opdateres uden en funktion kaldes (som i useState)
+      
+    const mouseEnter = () => { // En funktion, der køres, når musen er over motion graphic
+        if (motionGraphic.current) { // .current er en property, der kan bruges på useRef som undersøger, om useRef rent faktisk har en værdi
+            motionGraphic.current.play(); // Hvis dette er tilfældet starter motion graphic med play()-metoden, der virker på Lottie
+        }
+    };
+      
+    const mouseLeave = () => { // En funktion, der køres når musen forlader motion graphic
+        if (motionGraphic.current) { // .current er en property, der kan bruges på useRef som undersøger, om useRef rent faktisk har en værdi
+            motionGraphic.current.stop(); // Hvis dette er tilfældet stopper motion graphic med stop()-metoden, der virker på Lottie
+        }
+    };
+
+    const options = { // Et objekt, der tilknyttes motion graphic (angivet i <Lottie>)
+        animationData: animation, // animationData er tilknyttet Lottie og værdien er den animation, der skal køres
+        loop: false, // Motion graphic kører en gang - herefter skal musen på igen for at køre igen
+        autoplay: false, // Motion graphic aspilles ikke, når siden indlæses
     };
 
     return (
@@ -109,9 +124,10 @@ export default function Kompetencer() {
                         </svg>
                     </aside>
 
-                    <aside className={mystyle.motionGraphicLightMode}>
-                        <Lottie options={options} height={500} width={500} />
-                    </aside>
+                    <figure className={mystyle.motionGraphic} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+                        <Lottie options={options} height={500} width={500} ref={motionGraphic} />
+                        <figcaption>Hold musen over mig</figcaption>
+                    </figure>
 
                 </article>
             </article>

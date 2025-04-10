@@ -22,7 +22,7 @@ html {
     font-weight: lighter;
 }
 
-/* Når HTML har klassen .light - se Forside.jsx for at*/
+/* Når HTML har klassen .light - se Forside.jsx*/
 html.light {
     background-color: var(--lightModeBaggrund);
     color: var(--lightModeTekst);

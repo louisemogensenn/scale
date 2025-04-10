@@ -38,3 +38,13 @@
 .motionGraphic {
     margin-top: 217px; /* Afstand mellem infografik og motion graphic */
 }
+
+.motionGraphic:hover {
+    cursor: pointer; /* Giver en fornemmelse af, at der kan ske noget */
+}
+
+.motionGraphic figcaption {
+    font-style: italic; /* Skrå skrift */
+    text-align: center; /* Teksten placeres midt under motion graphic */
+    font-size: 15px; /* Skriftstørrelsen */
+}
