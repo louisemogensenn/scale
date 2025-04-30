@@ -48,3 +48,87 @@
     text-align: center; /* Teksten placeres midt under motion graphic */
     font-size: 15px; /* Skriftstørrelsen */
 }
+
+/* VIDEREUDVIKLING */
+.kontaktformular {
+    margin: 0 80px; /* Afstand til venstre kant */
+    color: inherit;
+    font: inherit;
+}
+
+.kontaktformular h1 {
+    margin: 10px 0 60px; /* Afstand til top, højre, bund og venstre*/
+    font-size: 50px; /* Skriftstørrelse */
+}
+
+.kontaktformular p {
+    font-size: 22px; /* Skriftstørrelse for tekst */
+    width: 571px; /* Tekstfeltets bredde */
+    margin-bottom: 130px; /* Afstand til næste information */
+}
+
+.kontaktformular aside {
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.kontaktformular label {
+    font-size: 30px;
+}
+
+.kontaktformular input {
+    border: 2px solid;
+    border-top: none;
+    width: 473px;
+    padding: 5px;
+    background-color: transparent;
+    color: inherit; /* Nedarver skrift- og kantfarve fra index.css */
+    outline: none; /* Fjerner den blå kant, når feltet er i fokus */
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.kontaktformular input::placeholder {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.kontaktformular input:focus {
+    border: 2px solid;
+}
+
+.kontaktformular button {
+    width: 172px;
+    height: 61px;
+    border: 2px solid;
+    background-color: transparent;
+    color: inherit;
+    align-self: center;
+    font-size: 25px;
+}
+
+.kontaktformular button:hover {
+    border: 4px solid;
+}
+
+.modal {
+    width: 671px; /* Fast bredde */
+    height: 303px; /* Fast højde */
+    border: 1px solid; /* Hvid kant */
+    border-color: inherit;
+    background-color: #000;
+    position: fixed; /* Sørg for, at modal er fast i forhold til skærmen */
+    top: 30%; /* Placer modal på midten af skærmen */
+    left: 50%; /* Placer modal på midten af skærmen */
+    transform: translate(-50%, -50%); /* Justér så modal er helt centreret */
+    text-align: center; /* Centrer teksten horisontalt */
+    display: flex;
+    justify-content: center; /* Centrer indholdet horisontalt */
+    align-items: center; /* Centrer indholdet vertikalt */
+    z-index: 1000; /* Sørg for, at modal vises over alt andet */
+    padding: 20px; /* Tilføj lidt indvendig afstand */
+}
+
+

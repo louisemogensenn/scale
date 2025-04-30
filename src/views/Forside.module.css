@@ -56,7 +56,7 @@
 }
 
 .hoverBesked {
-  display: none; /* Teksten er skjult i default */
+  display: flex; /* Teksten er skjult i default */
   position: absolute; /* Gør det muligt at positionere elementet oven på den usynlige boks */
   top: 50px; /* Placerer elementet 150px fra toppen */
   left: 50%; /* Flytter elementets venstre kant hen til midten af forælderens bredde */
@@ -67,6 +67,10 @@
   color: inherit; /* Nedarver tekstfarve fra HTML */
   filter: invert(1); /* Giver den omvendte tekstfarve */
   pointer-events: none; /* Gør det muligt, at teksten forbliver synlig, når musen kommer ind i tekstfeltet */
+}
+
+.hoverBesked.hidden {
+  display: none; /* Skjuler beskeden, når klassen "hidden" er tilføjet */
 }
 
 .skiftModeSektion:hover + .hoverBesked {
@@ -164,14 +168,14 @@
   color: inherit; /* Nedarver farve fra link */
 }
 
-.billedeHoverBesked {
-  display: none;
-  text-align: center; /* Placerer teksten i midten vertikalt */
-  align-items: right; /* Placerer teksten i midten vertikalt */
-  color: inherit; /* Nedarver tekstfarve fra HTML */
+/* VIDEREUDVIKLING */
+
+.forsidePortraetbilleder figure p {
+  text-align: center;
+  visibility: hidden;
 }
 
-.forsidePortraetbilleder img:hover + .billedeHoverBesked {
-  display: block;
+.forsidePortraetbilleder figure:hover p {
+  visibility: visible;
 }
 

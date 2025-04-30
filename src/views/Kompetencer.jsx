@@ -2,7 +2,7 @@ import mystyle from './Kompetencer.module.css';
 import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
 import animation from '../assets/motion-graphic-hvid.json';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Kompetencer() {
 
@@ -24,6 +24,18 @@ export default function Kompetencer() {
         animationData: animation, // animationData er tilknyttet Lottie og værdien er den animation, der skal køres
         loop: false, // Motion graphic kører en gang - herefter skal musen på igen for at køre igen
         autoplay: false, // Motion graphic aspilles ikke, når siden indlæses
+    };
+
+    const [bekraeftigelse, setBekraeftigelse] = useState(false);
+  
+    const visBekraeftigelse = () => {
+        // Vis bekræftelsesbesked
+        setBekraeftigelse(true);
+    
+        // Skjul den igen efter 3 sekunder
+        setTimeout(() => {
+            setBekraeftigelse(false);
+        }, 4000);
     };
 
     return (
@@ -130,7 +142,45 @@ export default function Kompetencer() {
                     </figure>
 
                 </article>
+
             </article>
+
+            <section className={mystyle.kontaktformular}>
+                <h1>TEST DIN EGEN SIDE</h1>
+                <p>Vi kan teste din hjemmeside energiforbrug og komme med konkretes tiltag, der kan optimere din side. Indsat dine oplysninger og vi vender tilbage inden for 24 timer.</p>
+
+                <form action="#">
+                    <aside>
+                        <label for="website">DIT WEBSITE:</label>
+                        <input type="text" required placeholder='www.website.dk'/>
+                    </aside>
+
+                    <aside>
+                        <label for="name">DIT NAVN:</label>
+                        <input type="text" required placeholder='Navn Navnesen'/>
+                    </aside>
+
+                    <aside>
+                        <label for="tel">DIT TELEFONNUMMER:</label>
+                        <input type="tel" required placeholder='+45 12 34 56 78'/>
+                    </aside>
+
+                    <aside>
+                        <label for="email">DIN E-MAIL:</label>
+                        <input type="email" required placeholder='navnnavnesen@email.dk'/>
+                    </aside>
+
+                    <aside>
+                        <button onClick={visBekraeftigelse}>SEND</button>
+                    </aside>
+                </form>
+
+                {bekraeftigelse && (
+                    <aside className={mystyle.modal}>
+                        <h2>TAK FOR DIN HENVENDELSE! <br /> <br /> Vi vender tilbage inden for 24 timer.</h2>
+                    </aside>
+            )}
+            </section>
             
         </>
     )

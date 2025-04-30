@@ -36,6 +36,17 @@ export default function Forside() {
     } else { // Hvis ikke dark mode er aktiveret
         backgroundClass += " " + mystyle.lightModeBillede; // Så tilføjes klassen lightmode til backgroundClass (så denne nu består af to klasser)
     }
+
+    // VIDEREUDVIKLING
+    const [isVisible, setIsVisible] = useState(true);
+
+    // useEffect til at skjule beskeden efter 4 sekunder
+        useEffect(() => {
+            const timer = setTimeout(() => {
+                setIsVisible(false); // Skjul beskeden efter 4 sekunder
+            }, 4000);
+            
+        }, []);
     
     return (
         <>
@@ -66,17 +77,13 @@ export default function Forside() {
             {/* Den sektion, der kan klikkes på for at skifte mellem dark mode og light mode */}
             <section className={mystyle.skiftModeSektion} onClick={toggleBaggrund}> {/* Sektionen er tom, da vi ønsker den gennemsigtig */}</section>
 
-            <aside className={mystyle.hoverBesked} onClick={toggleBaggrund}>
+            <aside className={mystyle.hoverBesked + (isVisible ? '' : ' ' + mystyle.hidden)} onClick={toggleBaggrund}>
                 <section>
                     <h1>KLIK HER</h1>
                     <p>Skift mellem dark- og light mode</p>
                 </section>
 
                 <p>Vidste du... At studier har vist, at dark mode kan spare op til 47% <br /> strøm på OLED-skærme?</p>
-            </aside>
-
-            <aside className={mystyle.billedeHoverBesked}>
-                <p>Vidste du, at farve på skærmen <br /> også påvirker din computers strømforbrug?</p>
             </aside>
 
             <article className={mystyle.tekstOgBilledeIndhold}>
@@ -88,11 +95,13 @@ export default function Forside() {
 
                     <aside className={mystyle.forsidePortraetbilleder}>
                         <figure>
-                            <img loading='lazy' src={pernille} alt="Billede af Pernille, der er Head of Design hos Scale"/>
+                            <p>Vidste du, <br /> at farver på skærmen også påvirker <br /> din computers strømforbrug?</p>
+                            <Link to="/kontakt"><img loading='lazy' src={pernille} alt="Billede af Pernille, der er Head of Design hos Scale"/></Link>
                             <figcaption>Pernille Christensen</figcaption>
                         </figure>
                         <figure>
-                            <img loading='lazy' src={louise} alt="Billede af Louise, der er Head of Development hos Scale"/>
+                            <p>Vidste du, <br /> at farver på skærmen også påvirker <br /> din computers strømforbrug?</p>
+                            <Link to="/kontakt"><img loading='lazy' src={louise} alt="Billede af Louise, der er Head of Development hos Scale"/></Link>
                             <figcaption>Louise Mogensen</figcaption>
                         </figure>
                     </aside>
@@ -116,7 +125,8 @@ export default function Forside() {
                 </article>
 
                 <article className={mystyle.kontaktOs}>
-                    <img loading='lazy' src={bagScale} alt="Et billede af teamet bag SCALE" />
+                    <Link to="/kontakt"><img loading='lazy' src={bagScale} alt="Et billede af teamet bag SCALE" /></Link>
+                    
                     <section className={mystyle.kontaktoverskriftOgTekst}>
                         <h1>KONTAKT OS</h1>
                         <p>Sammen udgør vi et stærkt team, der sætter din virksomhed i fokus! <br /> <br /> Vi tilbyder en bred vifte af services med et fokus på optimering af din virksomheds digitale tilstedeværelse. <br /> <br /> Vi gør det nemt for dig - tag fat i os, hvis du ønsker at høre mere.</p>
